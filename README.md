@@ -4,7 +4,10 @@ Backwater Refresh is a performance‑focused RuneLite Plugin Hub plugin that upd
 
 The plugin focuses on visual clarity and FPS by optionally hiding cosmetic, CPU‑intensive bubbles, swapping the fetid pools for thick backwater tanglegrass, and offering custom chat messages to maintain flavour.
 
+![Backwater Refresh demo](docs/backwaterrefresh-demo.gif)
+
 ---
+
 
 ## Features
 
