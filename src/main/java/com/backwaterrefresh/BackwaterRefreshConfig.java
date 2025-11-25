@@ -85,25 +85,12 @@ public interface BackwaterRefreshConfig extends Config
     }
 
     @ConfigItem(
-            keyName = "barrierModelId",
-            name = "Custom model ID",
-            description = "Model ID to use for replacement markers when \"Replace fetid pools\" "
-                    + "is enabled. Defaults to (" + DEFAULT_BARRIER_MODEL_ID + ").",
-            position = 2,
-            section = MODEL_SECTION
-    )
-    default int barrierModelId()
-    {
-        return DEFAULT_BARRIER_MODEL_ID;
-    }
-
-    @ConfigItem(
             keyName = "denseBarrierMarkers",
             name = "High Density",
             description = "If enabled, large fetid pools (2x2, 3x3) get one "
                     + "replacement model per tile in their footprint. If disabled, a single "
                     + "model is placed at the centre. Disable for large FPS boost.",
-            position = 3,
+            position = 2,
             section = MODEL_SECTION
     )
     default boolean denseBarrierMarkers()
@@ -116,7 +103,7 @@ public interface BackwaterRefreshConfig extends Config
             keyName = "randomBarrierRotation",
             name = "Random rotation",
             description = "Randomise the rotation of replacement models for fetid pools.",
-            position = 4,
+            position = 3,
             section = MODEL_SECTION
     )
     default boolean randomBarrierRotation()
@@ -128,7 +115,7 @@ public interface BackwaterRefreshConfig extends Config
             keyName = "gridAlignedRotation",
             name = "Grid-aligned rotation",
             description = "When random rotation is enabled, restrict rotations to quarter turns (0°, 90°, 180°, 270°).",
-            position = 5,
+            position = 4,
             section = MODEL_SECTION
     )
     default boolean gridAlignedRotation()
@@ -139,8 +126,8 @@ public interface BackwaterRefreshConfig extends Config
     @ConfigItem(
             keyName = "hideBarrierBubbles",
             name = "Hide fetid pools",
-            description = "Hide all 3D bubble (fetid pool) graphics entirely. For use with tile markers or debug/test. "
-                    + "Collision is unchanged. This takes precedence over model replacement.",
+            description = "Hide all 3D bubble (fetid pool) graphics entirely while leaving collision" +
+                    " and slowdown unchanged. This takes precedence over model replacement.",
             position = 6,
             section = MODEL_SECTION
     )

@@ -326,38 +326,6 @@ public class BackwaterRefreshPlugin extends Plugin
                 });
                 break;
 
-            // Changing the model ID can be done live by updating the
-            // existing RuneLiteObjects in-place.
-            case "barrierModelId":
-                clientThread.invoke(() ->
-                {
-                    cachedReplacementModel = null;
-                    cachedReplacementModelId = -1;
-
-                    if (config == null || !config.replaceBarrierBubbles() || config.hideBarrierBubbles())
-                    {
-                        // Either replacement is disabled, or 3D graphics are
-                        // hidden entirely – in both cases there is nothing
-                        // visible to update.
-                        return;
-                    }
-
-                    final Model model = getReplacementModel();
-                    if (model == null)
-                    {
-                        return;
-                    }
-
-                    for (RuneLiteObject rlo : activeObjects.values())
-                    {
-                        if (rlo != null)
-                        {
-                            rlo.setModel(model);
-                        }
-                    }
-                });
-                break;
-
             case "randomBarrierRotation":
             case "gridAlignedRotation":
                 clientThread.invoke(this::updateAllMarkerOrientation);
@@ -759,17 +727,9 @@ public class BackwaterRefreshPlugin extends Plugin
      */
     private Model getReplacementModel()
     {
-        int modelId = DEFAULT_MODEL_ID;
 
-        if (config != null)
-        {
-            modelId = config.barrierModelId();
-        }
-
-        if (modelId <= 0)
-        {
-            return null;
-        }
+        // Use a fixed, hub-safe model id
+        final int modelId = DEFAULT_MODEL_ID;
 
         if (cachedReplacementModel != null && cachedReplacementModelId == modelId)
         {

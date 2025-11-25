@@ -1,8 +1,8 @@
 # Backwater Refresh
 
-Backwater Refresh is a RuneLite Plugin Hub plugin that customises the CPU-intensive **Backwater Sailing** area in OSRS.
+Backwater Refresh is a performance‑focused RuneLite Plugin Hub plugin that updates the **Backwater Sailing** area in OSRS with lighter visuals.
 
-The plugin focuses on visual clarity and performance by hiding or replacing Backwater bubbles and optionally adding tile markers and custom chat messages.
+The plugin focuses on visual clarity and FPS by optionally hiding cosmetic, CPU‑intensive bubbles, swapping the fetid pools for thick backwater tanglegrass, and offering custom chat messages to maintain flavour.
 
 ---
 
@@ -10,16 +10,14 @@ The plugin focuses on visual clarity and performance by hiding or replacing Back
 
 ### Bubble graphics
 
-- **Hide surface bubbles** 
-  Removes the flat cosmetic Backwater surface bubbles so FPS is improved.
+- **Hide surface bubbles**  
+  Optionally removes the flat cosmetic Backwater surface bubbles to reduce visual noise and improve FPS.
 
 - **Replace fetid pools (3D bubbles)**  
-  Replaces 3D bubble “fetid pools” with a static model while keeping their collision intact to further improve FPS.
-    - Default model: jungle grass (`model id 4741`)
-    - Custom model id support via config
+  Optionally replaces 3D bubble “fetid pools” with static foliage while keeping their collision and slowdown effect intact.
 
 - **Hide fetid pools completely (optional)**  
-  Hides all 3D bubble graphics entirely while leaving collision as-is.  
+  Hides all 3D bubble graphics entirely while leaving collision and slowdown unchanged.  
   Useful together with tile markers or for debugging.
 
 - **High‑density vs low‑density markers**
@@ -35,18 +33,18 @@ The plugin focuses on visual clarity and performance by hiding or replacing Back
 
 Optional tile overlays for fetid pool footprints:
 
-- **Show tile markers**  
-  - Draws tiles where 3D bubbles / fetid pools are located.
-  - Defaults to off to prioritize FPS.
+- **Show tile markers**
+    - Draws tiles where 3D bubbles / fetid pools are located.
+    - Defaults to off to prioritise FPS.
 
 - **Show overlap**
     - On: draw full‑size pool footprints so overlapping pools darken where they intersect
-    - Off: one 1x1 tile marker per tile covered by any pool (higher FPS cost)
+    - Off: one 1x1 tile marker per tile covered by any pool (at a higher FPS cost)
 
 - **Custom colours**
     - Fill colour (with alpha)
     - Border colour (with alpha)
-    - Default setting is a 20% opacity purely cosmetic complement to the jungle grass.
+    - Default setting is a subtle, semi‑transparent complement to the tanglegrass theme.
 
 ### Chat message customisation
 
@@ -68,7 +66,6 @@ Key settings:
 - **Bubble Models**
     - *Hide surface bubbles*
     - *Replace fetid pools*
-    - *Custom model ID*
     - *High Density*
     - *Random rotation*
     - *Grid‑aligned rotation*
