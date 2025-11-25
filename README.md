@@ -10,7 +10,7 @@ The plugin focuses on visual clarity and performance by hiding or replacing Back
 
 ### Bubble graphics
 
-- **Hide surface bubbles**  
+- **Hide surface bubbles** 
   Removes the flat cosmetic Backwater surface bubbles so FPS is improved.
 
 - **Replace fetid pools (3D bubbles)**  
