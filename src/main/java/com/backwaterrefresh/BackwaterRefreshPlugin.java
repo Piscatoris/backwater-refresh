@@ -48,8 +48,7 @@ import net.runelite.client.ui.overlay.OverlayManager;
 @PluginDescriptor(
         name = "Backwater Refresh",
         description = "Enables customizability in Backwater to improve FPS, with a default Tanglegrass theme.",
-        tags = {"sailing", "backwater", "bubbles", "tanglegrass", "fetid", "pools", "fps", "optimization" },
-        enabledByDefault = false
+        tags = {"sailing", "backwater", "bubbles", "tanglegrass", "fetid", "pools", "fps", "optimization" }
 )
 public class BackwaterRefreshPlugin extends Plugin
 {
