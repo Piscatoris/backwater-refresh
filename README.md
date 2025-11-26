@@ -1,5 +1,8 @@
 # Backwater Refresh
 
+> **Status:** On hold – Jagex’s Backwater Sailing update (2025‑11‑26) fixed the FPS issue this plugin targeted and changed the bubble behaviour. This repo is kept for reference; the Plugin Hub PR has been closed.
+
+
 Backwater Refresh is a performance‑focused RuneLite Plugin Hub plugin that updates the **Backwater Sailing** area in OSRS with lighter visuals.
 
 The plugin focuses on visual clarity and FPS by optionally hiding cosmetic, CPU‑intensive bubbles, swapping the fetid pools for thick backwater tanglegrass, and offering custom chat messages to maintain flavour.
